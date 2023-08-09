@@ -12,5 +12,5 @@ export const sendToken = (res, user, statusCode, message) => {
         httpOnly: true,
         expires: new Date(Date.now() + process.env.COOKIE_EXPIRE*24*60*60*1000),
         secure: false
-    }).json({success: true, message, userData})
+    }).json({success: true, message, user: userData})
 }
